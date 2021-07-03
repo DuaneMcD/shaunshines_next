@@ -1,0 +1,164 @@
+.address-box {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  padding-top: 0.5em;
+  margin-top: 0.01em;
+  padding-bottom: 0.75em;
+  text-align: left;
+}
+
+#address {
+  font-family: var(--theme-font-varela);
+  color: var(--theme-orange);
+  font-size: 1.2em;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 20px;
+}
+#address:hover {
+  color: var(--theme-bluegrey);
+}
+.navbar {
+  display: flex;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  height: 110px;
+  width: 100vw;
+  /* justify-content: space-between; */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.shaunShinesLogo {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  margin: -0.25em 0 0 2em;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  list-style: none;
+  text-align: right;
+  width: 48vw;
+  margin: 0;
+  margin-left: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: flex-end;
+  width: 70%;
+}
+
+.nav-links {
+  font-size: 0.75em;
+  font-family: var(--theme-font-varela);
+  color: #fff;
+  display: flex;
+  text-decoration: none;
+  padding: 0;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* 
+
+*/
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    font-family: var(--theme-font-varela);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    padding: 0.25em;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}

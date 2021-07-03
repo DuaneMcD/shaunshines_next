@@ -1,0 +1,48 @@
+.headerContact {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: left;
+  font-family: var(--theme-font-montserrat);
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: fixed;
+  margin-left: 1.75em;
+  margin-top: 1.25em;
+  padding: 0em 0.35em 0.45em 0.65em;
+  border-radius: 1em;
+  color: var(--theme-orange);
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.headerPhoneNumber {
+  font-size: 1.35em;
+  text-decoration: none;
+  color: var(--theme-orange);
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+.headerPhoneNumber:hover,
+.headerEmail:hover,
+#scheduleService:hover {
+  color: var(--theme-offwhite);
+  cursor: pointer;
+}
+.headerEmail {
+  font-size: 1.25em;
+  text-decoration: none;
+  color: var(--theme-orange);
+  margin-top: 0.5em;
+}
+.bi.bi-calendar2-event {
+  font-size: 0.85em;
+}
+#scheduleService {
+  font-size: 1.7em;
+  color: var(--theme-blue);
+  font-weight: normal;
+  text-decoration: none;
+}
+#scheduleService:hover {
+  color: var(--theme-offwhite);
+  font-weight: bolder;
+}

@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background-image: url('./images/IMG_0946.jpg');
+  background-color: rgb(28, 27, 27);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.headerGraphics {
+  height: 50vh;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.headerWordMark {
+  margin-top: 8em;
+  margin-bottom: 3em;
+  width: 100%;
+  padding-bottom: 6.5em;
+}

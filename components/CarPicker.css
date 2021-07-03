@@ -1,0 +1,10 @@
+.carpicker select {
+  color: white;
+  border: none;
+  background: black;
+  margin-top: 0.25em;
+  width: 100%;
+}
+.detailService {
+  margin-top: 1.5em;
+}

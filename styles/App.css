@@ -1,0 +1,33 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css');
+@import '../components/Theme.css';
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--theme-blue);
+  border-radius: 2.5px;
+  border: 0px solid white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--theme-darkblue);
+}

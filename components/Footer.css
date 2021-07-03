@@ -1,0 +1,45 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'hours logo social';
+  width: 100vw;
+  color: white;
+  background-color: black;
+
+  text-align: center;
+  font-family: var(--theme-font-varela);
+  font-size: 1.1em;
+
+  margin-top: 1em;
+  padding-top: 1.25em;
+}
+.hours {
+  grid-area: hours;
+  text-decoration: none;
+  color: white;
+}
+.centerCol {
+  grid-area: logo;
+}
+#socialIcons {
+  grid-area: social;
+}
+.bi.bi-facebook {
+  color: blue;
+  font-size: 3.5em;
+  padding: 5px;
+}
+.bi.bi-instagram {
+  color: white;
+  font-size: 3.5em;
+  padding: 5px;
+}
+.bi.bi-youtube {
+  color: red;
+  font-size: 3.75em;
+  padding: 5px;
+}
+#thoseWhoServe {
+  margin-top: 25px;
+}

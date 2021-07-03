@@ -1,0 +1,78 @@
+.shop {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  grid-template-rows: masonry;
+  grid-template-areas:
+    '.     .      .     .'
+    '.   title  title  cart'
+    '.    img   select  date'
+    '. salescopy button button'
+    '.  disclaim  .     .';
+
+  font-family: var(--theme-font-varela);
+  font-size: 2em;
+  text-align: center;
+  background-color: var(--theme-offwhite);
+
+  border: 0.25em solid var(--theme-orange);
+}
+.cart {
+  grid-area: cart;
+  font-size: 1.2em;
+  height: 2em;
+  grid-area: cart;
+  color: var(--theme-orange);
+  background: transparent;
+  border: none;
+}
+.title {
+  grid-area: title;
+  font-family: var(--theme-font-varela);
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-block: 1em;
+  justify-self: center;
+}
+.shopImage {
+  grid-area: img;
+  width: 85%;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 1.2em;
+  border: 1.5px solid black;
+  border-radius: 0.1em;
+}
+.salesCopy {
+  grid-area: salescopy;
+  font-size: 0.5em;
+}
+.disclaimer {
+  grid-area: disclaim;
+  font-size: 0.5em;
+}
+.servicePicker {
+  grid-area: select;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.5em;
+  width: 1fr;
+}
+.promptSelectService {
+  font-size: 1.1em;
+  margin: 0;
+}
+.dateTimePicker {
+  grid-area: date;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.65em;
+  padding: 0;
+  margin: auto auto auto auto;
+}
+.addService {
+  grid-area: button;
+}
+.addToCart {
+  font-size: 1em;
+  height: 1.5em;
+}

@@ -1,0 +1,107 @@
+h1,
+h2 {
+  color: black;
+  font-family: var(--theme-font-playfair);
+  letter-spacing: 0.05em;
+}
+h3 {
+  font-family: var(--theme-font-varela);
+  font-size: 1.35em;
+  letter-spacing: 0.025em;
+  font-style: italic;
+  font-weight: normal;
+}
+h4 {
+  font-family: var(--theme-font-crete);
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  font-style: bolder;
+}
+h5,
+ul {
+  font-family: var(--theme-font-crete);
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  font-style: bolder;
+}
+
+.homeContent {
+  margin: 0;
+}
+
+.card {
+  text-align: center;
+  background-color: var(--theme-offwhite);
+  padding-bottom: 2.5em;
+  border: 1.1em solid var(--theme-darkblue);
+}
+#shaunQuote {
+  font-size: 5em;
+  margin-top: 0;
+}
+#quote {
+  border-bottom: none;
+}
+#features {
+  display: grid;
+  grid-template-columns: (3, 2fr);
+  grid-gap: 2em;
+  grid-template-areas:
+    '. cleaning interior paint .'
+    '. quality location protection .';
+
+  border-top: none;
+}
+#features > div:hover {
+  cursor: pointer;
+  color: var(--theme-blue);
+  border: 2px dashed var(--theme-blue);
+}
+#features > div > h4 {
+  font-size: 1.75em;
+}
+#features > div > h5 {
+  font-size: 1em;
+}
+.cleaning {
+  grid-area: cleaning;
+}
+.interior {
+  grid-area: interior;
+}
+.paintCorrection {
+  grid-area: paint;
+}
+.quality {
+  grid-area: quality;
+}
+.location {
+  grid-area: location;
+}
+.advancedProtection {
+  grid-area: protection;
+}
+.shaunShinesIs {
+  padding-top: 2.5em;
+}
+.askUsAbout {
+  padding-top: 0.5em;
+}
+.textSeperator::after {
+  content: '';
+  display: block;
+  background: orange;
+  width: 45%;
+  height: 3.25px;
+  border-radius: 49%;
+  margin-inline: auto;
+}
+.listContainer {
+  display: flex;
+  justify-content: center;
+  line-height: 2;
+}
+li {
+  list-style-type: none;
+  color: black;
+}
