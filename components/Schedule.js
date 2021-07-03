@@ -3,8 +3,8 @@ import Image from 'next/image';
 import CarPicker from './CarPicker';
 import PurchaseButton from './PurchaseButton';
 import { createPopper } from '@popperjs/core';
-import DatePicker from 'react-date-picker';
-import TimePicker from 'react-time-picker';
+// import DatePicker from 'react-date-picker';
+// import TimePicker from 'react-time-picker';
 // import DateTimePicker from 'react-datetime-picker';
 import serviceImg from './images/shaun-orange-camaro.JPG';
 
@@ -51,14 +51,14 @@ const Schedule = () => {
       </p>
       <CarPicker />
       <div className='dateTimePicker'>
-        <DatePicker
+        {/* <DatePicker
           className='datePicker'
           onChange={onChange}
           value={value}
           minDate={tomorrow}
           // maxDate={tomorrow.getDate() + 30}
         />
-        <TimePicker className='timePicker' onChange={onChange} value={value} />
+        <TimePicker className='timePicker' onChange={onChange} value={value} /> */}
       </div>
       <PurchaseButton />
     </main>
