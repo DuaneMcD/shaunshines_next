@@ -23,18 +23,12 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/icon?family=Material+Icons'
             rel='stylesheet'
           />
-          <script
-            src='./assets/webchat-branding.js'
-            dangerouslySetInnerHTML={{ __html: `` }}
-          />
-          <script
-            src='./assets/webchat-appConfig.js'
-            dangerouslySetInnerHTML={{ __html: `` }}
-          />
+
           <script
             src='https://kit.fontawesome.com/259fb81e1d.js'
             crossOrigin='anonymous'
             dangerouslySetInnerHTML={{ __html: `` }}
+            defer
           />
           <noscript>You need to enable JavaScript to run this app.</noscript>
         </Head>
