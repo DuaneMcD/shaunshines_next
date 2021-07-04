@@ -28,7 +28,11 @@ export function Navbar() {
           <Image
             className='shaunShinesLogo'
             src={logo}
+            objectFit='scale-down'
+            objectPosition='bottom left'
             alt='Shaun Shines Logo'
+            placeholder='blur'
+            priority
           />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -45,17 +49,17 @@ export function Navbar() {
               href='/schedule-online'
               className='nav-links'
               onClick={closeMobileMenu}>
-              Schedule Online
+              Request Quote
             </Link>
           </li>
-          <li className='nav-item'>
+          {/* <li className='nav-item'>
             <Link
               href='/services'
               className='nav-links'
               onClick={closeMobileMenu}>
               Services
             </Link>
-          </li>
+          </li> */}
           <li className='nav-item'>
             <Link href='/about' className='nav-links' onClick={closeMobileMenu}>
               About

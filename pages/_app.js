@@ -1,6 +1,5 @@
 import '../components/CarPicker.css';
 import '../components/Button.css';
-import '../components/HeaderContact.css';
 import '../components/Contact.css';
 import '../components/HeaderGraphic.css';
 import '../components/HomeContent.css';
@@ -12,6 +11,9 @@ import '../components/YearSelect.css';
 import '../components/TrimSelect.css';
 import '../components/Schedule.css';
 import '../components/PurchaseButton.css';
+import '../components/HeaderContact.css';
+import '../components/AboutContent.css';
+
 import '../styles/globals.css';
 import '../styles/App.css';
 

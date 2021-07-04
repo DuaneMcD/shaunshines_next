@@ -26,7 +26,14 @@ export const Footer = () => {
         </p>
       </a>
       <div className='centerCol'>
-        <Image src={logo} alt='Shaun Shines Detailing' width='300' />
+        <Image
+          src={logo}
+          alt='Shaun Shines Detailing'
+          width='300'
+          objectFit='scale-down'
+          objectPosition='top center'
+          placeholder='blur'
+        />
         <p>
           © 2021 Shaun Shines Detailing <br />
           All Rights Reserved
@@ -47,8 +54,10 @@ export const Footer = () => {
         <Image
           src={thoseWhoServe}
           alt='american flag'
-          width='180'
           id='thoseWhoServe'
+          layout='responsive'
+          objectFit='inherit'
+          objectPosition='bottom center'
         />
       </div>
     </div>

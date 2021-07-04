@@ -1,10 +1,12 @@
-import HomeContent from '../components/HomeContent';
+import NavBar from '../components/NavBar';
+import AboutContent from '../components/AboutContent';
 import Contact from '../components/Contact';
 
 export function Home() {
   return (
     <>
-      <HomeContent />
+      <NavBar />
+      <AboutContent />
       <Contact />
     </>
   );

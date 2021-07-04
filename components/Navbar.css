@@ -10,14 +10,15 @@
 #address {
   font-family: var(--theme-font-varela);
   color: var(--theme-orange);
-  font-size: 1.2em;
   letter-spacing: 1.25px;
   font-weight: bold;
   text-decoration: none;
   padding-left: 20px;
+  z-index: 10;
 }
 #address:hover {
   color: var(--theme-bluegrey);
+  z-index: 100;
 }
 .navbar {
   display: flex;
@@ -27,15 +28,15 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
-.shaunShinesLogo {
+/* .shaunShinesLogo {
   display: block;
   width: 300px;
   max-width: 100%;
-  margin: -0.25em 0 0 2em;
-}
+  margin: 3em;
+} */
 
 .nav-menu {
   display: grid;
@@ -50,7 +51,7 @@
 .nav-item {
   display: flex;
   align-items: flex-end;
-  width: 70%;
+  width: 100%;
   font-size: 0.75em;
   font-family: var(--theme-font-varela);
   color: #fff;
@@ -59,7 +60,7 @@
   padding: 0;
 }
 
-.nav-item:hover {
+.nav-item > a:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }

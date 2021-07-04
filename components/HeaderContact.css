@@ -13,6 +13,7 @@
   border-radius: 1em;
   color: var(--theme-orange);
   background-color: rgba(0, 0, 0, 0.65);
+  z-index: 10;
 }
 .headerPhoneNumber {
   font-size: 1.35em;
