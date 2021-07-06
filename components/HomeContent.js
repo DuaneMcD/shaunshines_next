@@ -20,7 +20,7 @@ export const HomeContent = () => {
         <section id='features' className='card'>
           <div className='cleaning'>
             {/* <Image src='' alt='' /> */}
-            <h4>Cleaning</h4>
+            <h4 className='card-title' >Cleaning</h4>
             <h5>
               We Offer Several Levels of Vehicle Cleaning From Simple Hand Wash
               Up to Showroom finish
@@ -28,7 +28,7 @@ export const HomeContent = () => {
           </div>
           <div className='interior'>
             {/* <Image src='' alt='' /> */}
-            <h4>Interior</h4>
+            <h4 className='card-title' >Interior</h4>
             <h5>
               Shampoo, Steam Clean and Vacuum You Spend a Lot of Time in the
               Interior It Deserves to be Meticulously Cared for
@@ -36,7 +36,7 @@ export const HomeContent = () => {
           </div>
           <div className='paintCorrection'>
             {/* <Image src='' alt='' /> */}
-            <h4>Paint Correction</h4>
+            <h4 className='card-title' >Paint Correction</h4>
             <h5>
               {` Swirls, Scratches and Oxidation We'll Repair your Surface Paint
               Damage`}
@@ -44,7 +44,7 @@ export const HomeContent = () => {
           </div>
           <div className='quality'>
             {/* <Image src='' alt='' /> */}
-            <h4>Quality</h4>
+            <h4 className='card-title' >Quality</h4>
             <h5>
               No Cut Corners, Rush Jobs or Damage The Best Products on Every Job
               A Proper Detail Everytime
@@ -52,7 +52,7 @@ export const HomeContent = () => {
           </div>
           <div className='location'>
             {/* <Image src='' alt='' /> */}
-            <h4>Location</h4>
+            <h4 className='card-title' >Location</h4>
             <h5>
               Schedule Service at Our Location, Online at Your Convenience; Ask
               Us About Mobile Detailing!
@@ -60,7 +60,7 @@ export const HomeContent = () => {
           </div>
           <div className='advancedProtection'>
             {/* <Image src='' alt='' /> */}
-            <h4>Advanced Protection</h4>
+            <h4 className='card-title' >Advanced Protection</h4>
             <h5>
               Exterior Polish, Ceramic Treatment, Tire CareLeather, Cloth and
               Glass Protection Ask Us How to Protect Your Vehicle

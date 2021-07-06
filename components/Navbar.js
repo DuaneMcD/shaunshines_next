@@ -14,7 +14,9 @@ export function Navbar() {
       <section className='address-box'>
         <a
           id='address'
-          href='https://www.google.com/maps/place/Shaun+Shines+Automotive+Detailing/@36.8141086,-76.1014505,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd628d231aa7bdf57!8m2!3d36.8141086!4d-76.0992618?authuser=5'>
+          href='https://www.google.com/maps/place/Shaun+Shines+Automotive+Detailing/@36.8141086,-76.1014505,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd628d231aa7bdf57!8m2!3d36.8141086!4d-76.0992618?authuser=5'
+          target='_blank'
+          rel='noreferrer'>
           <i className='bi bi-geo-alt-fill'></i> 3642 Holland Road Unit 103,
           Virgina Beach, VA 23452
         </a>

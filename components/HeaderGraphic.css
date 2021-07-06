@@ -1,20 +1,7 @@
-.header {
-  text-align: center;
-  top: 0;
-  left: 0;
+.headerGraphicContainer {
   width: 100%;
   height: 50vh;
 }
-.headerGraphics {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.headerGraphicContainer > div {
   z-index: -1;
-}
-
-.headerWordMark {
-  margin-top: 8em;
-  margin-bottom: 3em;
-  width: 100%;
-  padding-bottom: 6.5em;
 }

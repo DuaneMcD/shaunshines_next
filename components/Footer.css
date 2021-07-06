@@ -40,6 +40,7 @@
   font-size: 3.75em;
   padding: 5px;
 }
-#thoseWhoServe {
-  margin-top: 25px;
+.honoring-container {
+  max-width: 300px;
+  margin: 10px auto 0 auto;
 }

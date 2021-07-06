@@ -3,7 +3,7 @@ export const Contact = () => {
     <div className='contact'>
       <section className='contactContainer'>
         <div id='contactText'>
-          <h4>
+          <h4 className='contactCopy-top'>
             <em>Shaun Shines</em> Would Love To Hear From You!
           </h4>
           <h5 className='contactCopy'>
