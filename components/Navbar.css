@@ -2,10 +2,9 @@
   width: 100%;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   padding-top: 0.5em;
-  margin-top: 0.01em;
+  margin: 0.01em;
   padding-bottom: 0.75em;
   text-align: left;
-  z-index: 50;
 }
 
 #address {
@@ -14,7 +13,7 @@
   letter-spacing: 1.25px;
   font-weight: bold;
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: 32px;
   position: relative;
 }
 #address:hover {
@@ -29,14 +28,6 @@
   top: 0;
   z-index: 1;
 }
-
-/* .shaunShinesLogo {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  margin: 3em;
-} */
-
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(3, auto);

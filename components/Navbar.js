@@ -31,7 +31,7 @@ export function Navbar() {
             className='shaunShinesLogo'
             src={logo}
             objectFit='scale-down'
-            objectPosition='bottom left'
+            objectPosition='4%'
             alt='Shaun Shines Logo'
             placeholder='blur'
             priority

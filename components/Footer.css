@@ -25,20 +25,21 @@
 #socialIcons {
   grid-area: social;
 }
-.bi.bi-facebook {
+.bi.bi-facebook:hover {
   color: blue;
-  font-size: 3.5em;
-  padding: 5px;
 }
-.bi.bi-instagram {
+.bi.bi-instagram:hover {
+  color: #c13584;
+}
+.bi.bi-youtube:hover {
+  color: rgb(255 0 0);
+}
+.bi.bi-facebook,
+.bi.bi-instagram,
+.bi.bi-youtube {
   color: white;
   font-size: 3.5em;
-  padding: 5px;
-}
-.bi.bi-youtube {
-  color: red;
-  font-size: 3.75em;
-  padding: 5px;
+  padding: 15px;
 }
 .honoring-container {
   max-width: 300px;

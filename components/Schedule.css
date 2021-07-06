@@ -33,6 +33,7 @@
 .form-container {
   background-color: var(--theme-orange);
   margin-bottom: 2em;
+  border-radius: 3px;
 }
 .quoteForm {
   padding: 1em 3em 0.5em 3em;
