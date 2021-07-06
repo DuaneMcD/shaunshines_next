@@ -27,7 +27,7 @@ export const sendQuoteRequest = async (req, res) => {
   try {
     const emailRequest = await transporter.sendMail({
       from: email,
-      to: 'hello@shaunshines.com',
+      to: 'Duane@esterequities.com',
       subject: `Quote request for a ${carMake} ${carModel} ${service} `,
       html: `<p>You have a new quote request from ${name}. </p><br>
       <p>Phone: ${phone} </p><br>
