@@ -8,11 +8,11 @@
 #shaunBelieve {
   color: white;
   font-size: 4em;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 #shaunStory {
   font-size: 1.25em;
-  margin: 0;
+  margin: 10px 0 0 0;
 }
 .aboutContent {
   display: flex;

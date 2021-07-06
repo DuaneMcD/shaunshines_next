@@ -13,7 +13,7 @@ export const HeaderGraphic = () => {
           placeholder='blur'
           layout='fill'
           objectFit='cover'
-          objectPosition='left bottom'
+          objectPosition='center bottom'
         />
       </div>
     </>

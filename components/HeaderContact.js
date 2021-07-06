@@ -10,7 +10,7 @@ export const HeaderContact = () => {
           href='mailto:Hello@shaunshines.com?subject=customer%20contact'>
           <i className='bi bi-envelope'></i> Hello@ShaunShines.com
         </a>
-        <a id='scheduleService' href='./schedule-service'>
+        <a id='scheduleService' href='./schedule-online'>
           <i className='bi bi-calendar2-event'></i> Schedule A Detail
         </a>
       </div>
