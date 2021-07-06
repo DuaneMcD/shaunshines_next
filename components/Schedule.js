@@ -1,66 +1,133 @@
 import { useState } from 'react';
-import Image from 'next/image';
+import { useForm } from 'react-hook-form';
 import CarPicker from './CarPicker';
-import PurchaseButton from './PurchaseButton';
-import { createPopper } from '@popperjs/core';
-// import DatePicker from 'react-date-picker';
-// import TimePicker from 'react-time-picker';
-// import DateTimePicker from 'react-datetime-picker';
+import Image from 'next/image';
 import serviceImg from './images/shaun-orange-camaro.JPG';
+import axios from 'axios';
 
-const Schedule = () => {
+export const Schedule = () => {
   const [value, onChange] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
   const [estimate, setEstimate] = useState();
+  const { register, handleSubmit, errors, reset } = useForm();
 
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  const quoteRequestSubmit = async values => {
+    const config = {
+      method: 'post',
+      url: `${process.env.NEXT_PUBLIC_URL}/api/requestQuote`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: values,
+    };
 
-  // const datePicker = () => {
-  //   $('picker').datetimepicker({
-  //     timepicker: true,
-  //     datepicker: true,
-  //     format: 'Y-m-d H:i',
-  //     // value: {new Date()},
-  //     weeks: true,
-  //   });
-  // };
+    try {
+      const response = await axios(config);
+      console.log(response);
+      if (response.data.status == 200) {
+        console.log('Success!');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <main className='shop'>
-      <button id='cart' className='cart'>
-        <i className='bi bi-cart-fill'></i>
-      </button>
-      <h1 className='title'>Schedule Service</h1>
-      <Image className='shopImage' src={serviceImg} alt='' />
-      <p className='salesCopy'>
-        Shaun Shines offers bespoke detailing services to suite your vehicle
-        needs. <br />
-        <br />
-        To schedule service please enter your vehicle details, detailing service
-        and a date.
-      </p>
-      <p className='disclaimer'>
-        <u>Notice</u>
-        <br />
-        **Base Prices shown**
-        <br />
-        The quote may vary depending on vehicles’ size/condition – heavily
-        pitted, soiled, badly scratched etc. All vehicles are reviewed for
-        condition before service.
-      </p>
-      <CarPicker />
-      <div className='dateTimePicker'>
-        {/* <DatePicker
-          className='datePicker'
-          onChange={onChange}
-          value={value}
-          minDate={tomorrow}
-          // maxDate={tomorrow.getDate() + 30}
-        />
-        <TimePicker className='timePicker' onChange={onChange} value={value} /> */}
+      <h1 className='title'>Request A Quote</h1>
+      <div className='quoteBlock'>
+        <p className='salesCopy'>
+          {`Shaun Shines offers bespoke detailing services to suite your vehicle needs.
+
+To schedule service please enter your vehicle details, detailing service and provide desired date or availabilty in comments.`}
+        </p>
+        <div className='form-container'>
+          <form
+            className='quoteForm'
+            onSubmit={handleSubmit(quoteRequestSubmit)}>
+            <label htmlFor='name'>Contact Full Name</label>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              placeholder='Speed Racer'
+              {...register('name', { required: true })}
+            />
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              placeholder='yourname@email.com'
+              {...register('email', { required: true })}
+            />
+            <label htmlFor='phone'>Phone Number</label>
+            <input
+              type='phone'
+              id='phone'
+              name='phone'
+              placeholder='757-000-0000'
+              {...register('phone', { required: true })}
+            />
+            <label htmlFor='carYear'>Vehicle Year</label>
+            <input
+              type='number'
+              id='carYear'
+              name='carYear'
+              placeholder='2020'
+              {...register('carYear', { required: true })}
+            />
+            <label htmlFor='carMake'>Vehicle Make</label>
+            <input
+              type='text'
+              id='carMake'
+              name='carMake'
+              placeholder='Subaru'
+              {...register('carMake', { required: true })}
+            />
+            <label htmlFor='carModel'>Vehicle Model</label>
+            <input
+              type='text'
+              id='carModel'
+              name='carModel'
+              placeholder='WRX'
+              {...register('carModel', { required: true })}
+            />
+            <label htmlFor='carTrim'>Vehicle Trim</label>
+            <input
+              type='text'
+              id='carTrim'
+              name='carTrim'
+              placeholder='STI'
+              {...register('carTrim', { required: true })}
+            />
+            <label htmlFor='service'>Service Requested</label>
+            <select
+              name='service'
+              id='service'
+              {...register('service', { required: true })}>
+              <option value='Select a Service'>Select a Service</option>
+              <option value='Make it Shine'>Make it Shine</option>
+              <option value='Exterior'>Exterior</option>
+              <option value='Interior'>Interior</option>
+              <option value='Vinyl Wrap'>Vinyl Wrap</option>
+              <option value='Custom'>Custom</option>
+            </select>
+            <label htmlFor='comments'>Desired Time & Comments</label>
+            <textarea
+              id='comments'
+              name='comments'
+              rows='4'
+              cols='60'
+              placeholder='I would like to ...'
+              {...register('comments', { required: true })}
+            />
+            <button type='submit' className='submitRequest'>
+              Request Quote
+            </button>
+          </form>
+        </div>
       </div>
-      <PurchaseButton />
     </main>
   );
 };

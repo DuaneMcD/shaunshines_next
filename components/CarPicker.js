@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
 import Axios from 'axios';
 import Fetch from 'node-fetch';
 import YearSelect from './YearSelect';
@@ -25,10 +25,6 @@ const CarPicker = () => {
     { label: 'Custom', value: 'Custom' },
   ];
 
-  // const fetchModels = async () => {
-  //   const response = await Axios(models_URL);
-  //   setModels(response.data.Results);
-  // };
   const fetchModels = async () => {
     const where = encodeURIComponent(
       JSON.stringify({
@@ -75,46 +71,36 @@ const CarPicker = () => {
     // setTrims([data.results[0].Category]);
   };
 
-  useEffect(() => {
-    if (selectedYear && selectedMake) {
-      fetchModels();
-      ///reset model select with new year | make
+  const Input = props => {
+    {
+      return <components.Input {...props} />;
     }
-  }, [selectedYear, selectedMake]);
-
-  useEffect(() => {
-    if (selectedYear && selectedMake && selectedModel) {
-      fetchVehicleCategory();
-    }
-  }, [selectedYear, selectedMake, selectedModel]);
+  };
 
   return (
-    <div className='servicePicker'>
-      <p>Please select a vehicle</p>
-      <YearSelect function={setSelectedYear} />
-      <MakeSelect function={setSelectedMake} />
-      <ModelSelect
-        make={selectedMake}
-        year={selectedYear}
-        models={models}
-        function={setSelectedModel}
-      />
-      <TrimSelect
-        make={selectedMake}
-        year={selectedYear}
-        selectedModel={selectedModel}
-        trims={trims}
-        function={setTrims}
-      />
-      <p className='promptSelectService'>Detail service:</p>
-      <Select
-        className='selectService'
-        options={options}
-        onChange={e => {
-          setSelectedService(e.value);
-        }}
-      />
-    </div>
+    <>
+      <Select components={{ Input }} isMulti />
+      <div className='servicePicker'>
+        <p>Please enter vehicle information</p>
+        <YearSelect function={setSelectedYear} />
+        <MakeSelect function={setSelectedMake} />
+        <ModelSelect
+          make={selectedMake}
+          year={selectedYear}
+          models={models}
+          function={setSelectedModel}
+        />
+        <TrimSelect
+          make={selectedMake}
+          year={selectedYear}
+          selectedModel={selectedModel}
+          trims={trims}
+          function={setTrims}
+        />
+        <p className='promptSelectService'>Detail service:</p>
+        <Select className='selectService' options={options} />
+      </div>
+    </>
   );
 };
 
