@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import { useEffect } from 'react';
 import '../components/CarPicker.css';
 import '../components/Button.css';
 import '../components/Contact.css';
@@ -14,30 +14,25 @@ import '../components/Schedule.css';
 import '../components/PurchaseButton.css';
 import '../components/HeaderContact.css';
 import '../components/AboutContent.css';
-
 import '../styles/globals.css';
 import '../styles/App.css';
 
-
- 
-
 function MyApp({ Component, pageProps }) {
-
-//// Chatra widget
+  //// Chatra widget
   useEffect(() => {
-
-  (function(d, w, c) {
-          w.ChatraID = '39oMWcbRD5SfacNen';
-          var s = d.createElement('script');
-          w[c] = w[c] || function() {
-              (w[c].q = w[c].q || []).push(arguments);
-          };
-          s.async = true;
-          s.src = 'https://call.chatra.io/chatra.js';
-          if (d.head) d.head.appendChild(s);
-      })(document, window, 'Chatra');
-
-  }, [])
+    (function (d, w, c) {
+      w.ChatraID = '39oMWcbRD5SfacNen';
+      var s = d.createElement('script');
+      w[c] =
+        w[c] ||
+        function () {
+          (w[c].q = w[c].q || []).push(arguments);
+        };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  }, []);
 
   return <Component {...pageProps} />;
 }
