@@ -11,16 +11,6 @@ export function Navbar() {
 
   return (
     <>
-      <section className='address-box'>
-        <a
-          id='address'
-          href='https://www.google.com/maps/place/Shaun+Shines+Automotive+Detailing/@36.8141086,-76.1014505,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd628d231aa7bdf57!8m2!3d36.8141086!4d-76.0992618?authuser=5'
-          target='_blank'
-          rel='noreferrer'>
-          <i className='bi bi-geo-alt-fill'></i> 1397 Taylor Farm Road, Virginia
-          Beach, VA 23452
-        </a>
-      </section>
       <nav className='navbar'>
         <Link
           href='/'
@@ -37,6 +27,14 @@ export function Navbar() {
             priority
           />
         </Link>
+        <a
+          id='address'
+          href='https://www.google.com/maps/place/Shaun+Shines+Automotive+Detailing/@36.8141086,-76.1014505,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd628d231aa7bdf57!8m2!3d36.8141086!4d-76.0992618?authuser=5'
+          target='_blank'
+          rel='noreferrer'>
+          <i className='bi bi-geo-alt-fill'></i> 1397 Taylor Farm Road, Virginia
+          Beach, VA 23452
+        </a>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
